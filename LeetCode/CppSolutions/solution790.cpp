@@ -15,6 +15,7 @@ public:
             dp[idx][0] = (dp[(idx + 2) % 3][0] + dp[(idx + 2) % 3][1] + dp[(idx + 2) % 3][2] + dp[(idx + 1) % 3][0]) % MOD;
             dp[idx][1] = (dp[(idx + 1) % 3][0] + dp[(idx + 2) % 3][2]) % MOD;
             dp[idx][2] = (dp[(idx + 1) % 3][0] + dp[(idx + 2) % 3][1]) % MOD;
+            // dp[x][0] 代表 "I" 型, dp[x][1] 代表 "r" 型, dp[x][2] 代表 "L" 型。
         }
         return dp[(n - 1) % 3][0];
     }
